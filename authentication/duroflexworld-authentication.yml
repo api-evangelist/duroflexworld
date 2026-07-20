@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: well-known/duroflexworld-openid-configuration.json
+docs: https://shopify.dev/docs/api/customer
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: S256
+  notes: >-
+    Duroflexworld runs on Shopify. Customer authentication uses the Shopify
+    Customer Account API, an OAuth 2.0 / OpenID Connect provider discoverable at
+    the store domain. Storefront browsing (including the Storefront MCP server)
+    is public; authenticated customer operations require an access token from the
+    authorization-code + PKCE flow. There is no first-party developer/partner API
+    program for this store beyond the Shopify platform surfaces.
+schemes:
+- name: shopify-customer-account-oidc
+  type: openIdConnect
+  openIdConnectUrl: https://duroflexworld.com/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/38978125956
+  sources: [well-known/duroflexworld-openid-configuration.json]
+- name: shopify-customer-account-oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://account.duroflexworld.com/authentication/oauth/authorize
+    tokenUrl: https://account.duroflexworld.com/authentication/oauth/token
+    pkce: S256
+    grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+    token_endpoint_auth: client_secret_basic
+    id_token_alg: RS256
+    jwks_uri: https://account.duroflexworld.com/authentication/.well-known/jwks.json
+  sources: [well-known/duroflexworld-oauth-authorization-server.json]
