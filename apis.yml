@@ -1,8 +1,30 @@
 aid: duroflexworld
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/duroflexworld.png
 name: Duroflexworld
-description: 'Duroflexworld is a company surfaced as a portfolio company of norwest-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Duroflex (duroflexworld.com) is one of India's most trusted sleep-solutions
+  brands, selling mattresses, sofas, recliners, beds, pillows and mattress
+  protectors direct-to-consumer with up to a 10-year warranty, free shipping and
+  EMI options. The online store runs on Shopify and exposes real agent-facing
+  commerce surfaces discovered by the API Evangelist enrichment pipeline: a hosted
+  Storefront MCP server at /api/mcp (catalog search, cart, product details, and
+  shop policy/FAQ tools that conform to the UCP catalog capability) and a Shopify
+  Customer Account API secured with OAuth 2.0 / OpenID Connect, advertising an
+  agent-oriented customer-account-mcp-api scope. Surfaced originally as a Norwest
+  Venture Partners portfolio lead, the profile is now enriched with its MCP,
+  well-known OIDC discovery, authentication, scopes and domain-security artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/duroflexworld/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +34,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-- Unknown
+- Ecommerce
+- Retail
+- Sleep
+- Mattresses
+- Furniture
+- Shopify
+- MCP
+- Consumer Goods
+- India
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +54,30 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://duroflexworld.com
+  url: https://www.duroflexworld.com/
+- type: MCPServer
+  name: Duroflexworld Storefront MCP
+  url: mcp/duroflexworld-mcp.yml
+- type: WellKnown
+  url: well-known/duroflexworld-well-known.yml
+- type: Authentication
+  url: authentication/duroflexworld-authentication.yml
+- type: OAuthScopes
+  url: scopes/duroflexworld-scopes.yml
+- type: LLMsTxt
+  url: llms/duroflexworld-llms.txt
+- type: DomainSecurity
+  url: security/duroflexworld-domain-security.yml
+- type: Blog
+  url: https://www.duroflexworld.com/blogs/news
+- type: Support
+  url: https://www.duroflexworld.com/pages/contact-us
+- type: TermsOfService
+  url: https://www.duroflexworld.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.duroflexworld.com/policies/privacy-policy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

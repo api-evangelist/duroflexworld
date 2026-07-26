@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: live tools/list against https://www.duroflexworld.com/api/mcp
+server:
+  name: duroflexworld-storefront
+  description: >-
+    Shopify Storefront MCP server for the Duroflex (duroflexworld.com) online
+    store. Exposes catalog search, cart management, product lookup, and shop
+    policy/FAQ retrieval to AI agents. Hosted and operated by Shopify's platform
+    on the store's own domain; conforms to the UCP (Universal Commerce Protocol)
+    catalog capability.
+  transport: http
+  url: https://www.duroflexworld.com/api/mcp
+  platform: Shopify Storefront MCP
+tools:
+- name: search_catalog
+  description: >-
+    Search for products from the online store using natural language queries,
+    filter criteria (categories, price range), or both. Paginated; conforms to
+    the UCP catalog search capability (dev.ucp.shopping.catalog.search).
+- name: get_cart
+  description: >-
+    Get a cart including items, shipping options, discount info, and checkout URL
+    for a given cart id.
+- name: update_cart
+  description: >-
+    Add/remove/update line items, buyer identity, delivery addresses, delivery
+    options, discount codes, gift cards, and notes on a cart in one consolidated
+    call. Creates a new cart when no cart_id is supplied.
+- name: get_product_details
+  description: >-
+    Look up a product by id, optionally selecting a specific variant via options,
+    with country/language localization.
+- name: search_shop_policies_and_faqs
+  description: >-
+    Answer questions about the store's policies, products, or services (return
+    policy, shipping policy, contact number, hours of operation).
