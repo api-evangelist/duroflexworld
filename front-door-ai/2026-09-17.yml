@@ -1,0 +1,26 @@
+# Front Door AI Index — duroflexworld — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: duroflexworld
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.duroflexworld.com
+  final_host: www.duroflexworld.com
+  ownership: own
+  owner: duroflexworld
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 4
+  host_score: 4
+  density: 5.1
+  words: 784
+  tiers:
+    agentic: 0
+    core: 4
+    model: 0
+  ambiguous: 9
+  top_terms:
+    smart: 9
+    AI: 4

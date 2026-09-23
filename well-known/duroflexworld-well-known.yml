@@ -2,18 +2,25 @@ generated: '2026-07-18'
 method: searched
 source: live probes of https://duroflexworld.com/.well-known/*
 host: https://duroflexworld.com
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: duroflexworld-openid-configuration.json
-  note: Shopify Customer Account API OIDC discovery document
-- path: /.well-known/oauth-authorization-server
-  status: 200
-  file: duroflexworld-oauth-authorization-server.json
-  note: RFC 8414 authorization-server metadata (identical to OIDC discovery)
-- path: /.well-known/security.txt
-  status: 301
-- path: /.well-known/api-catalog
-  status: 301
-- path: /.well-known/ai-plugin.json
-  status: 301
+hosts:
+- host: https://duroflexworld.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: duroflexworld-openid-configuration.json
+    note: Shopify Customer Account API OIDC discovery document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: duroflexworld-oauth-authorization-server.json
+    note: RFC 8414 authorization-server metadata (identical to OIDC discovery)
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
