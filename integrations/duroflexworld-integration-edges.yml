@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/duroflexworld/integrations
+- https://n8n.io/integrations/duroflexworld/
+- https://composio.dev/toolkits/duroflexworld
+- https://monid.ai/tools/duroflexworld
+checked:
+- https://composio.dev/toolkits/duroflexworld
+- https://monid.ai/tools/duroflexworld
+- https://n8n.io/integrations/duroflexworld/
+- https://zapier.com/apps/duroflexworld/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
